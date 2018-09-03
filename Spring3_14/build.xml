@@ -19,7 +19,7 @@
 
 	<target name="compile" depends="init" description="컴파일합니다">
 		<!-- javac destdir="${classes.dir}" debug="on" debuglevel="lines, vars, source" includeantruntime="false" -->
-		<javac destdir="${classes.dir}" debug="on" debuglevel="lines, vars, source" includeantruntime="false">
+		<javac destdir="${classes.dir}" debug="on" includeantruntime="false">
 			<src path="${src.dir}"/>
 			<classpath refid="classpath"/>
 		</javac>
