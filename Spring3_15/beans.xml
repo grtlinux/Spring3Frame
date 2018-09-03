@@ -7,20 +7,24 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
-	
-	
+
+
     <bean id="loggingSample" class="sample1.LoggingSample" />
-    
-    <aop:config>
-    	<aop:aspect id="logAspece" ref="loggingSample">
-    		<aop:pointcut expression="execution(* sayHello())" id="logPointCut"/>
-    		<aop:around pointcut-ref="logPointCut" method="logAround"/>
-    	</aop:aspect>
-    </aop:config>	
 
 	<bean id="targetBean" class="sample1.MessageBeanImpl">
         <property name="name">
             <value>Spring</value>
         </property>
+        <property name="message">
+        	<value>I wanna see you...</value>
+        </property>
     </bean>
+
+    <aop:config>
+    	<aop:aspect id="logAspece" ref="loggingSample">
+    		<aop:pointcut expression="execution(* sayHello())" id="logPointCut"/>
+    		<aop:around pointcut-ref="logPointCut" method="logAround"/>
+    	</aop:aspect>
+    </aop:config>
+
 </beans>
