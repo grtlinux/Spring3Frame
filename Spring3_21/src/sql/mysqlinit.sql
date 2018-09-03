@@ -1,0 +1,4 @@
+DROP DATABASE spring;
+CREATE DATABASE spring;
+GRANT ALL PRIVILEGES ON spring.* to root@localhost IDENTIFIED BY 'toor' WITH GRANT OPTION;
+quit
