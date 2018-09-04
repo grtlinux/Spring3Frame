@@ -1,5 +1,8 @@
 package dao;
 
-public class UserDao {
+import logic.User;
 
+public interface UserDao {
+
+	public void create(User user);
 }

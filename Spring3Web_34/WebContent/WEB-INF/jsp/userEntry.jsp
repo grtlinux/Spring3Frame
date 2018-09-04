@@ -6,7 +6,7 @@
 </head>
 <body>
 <div align="center" class="body">
-<h2>유저 등록 화면</h2>
+<h2>유저 등록 화면(write in English)</h2>
 <form:form modelAttribute="user" method="post" action="userEntry.html">
 	<spring:hasBindErrors name="user">
 		<font color="red"><c:forEach items="${errors.globalErrors}"
@@ -48,10 +48,10 @@
 		<tr height="40px">
 			<td>직업</td>
 			<td><form:select path="job" cssClass="jobs">
-				<form:option value="사회인" label="사회인" />
-				<form:option value="주부" label="주부" />
-				<form:option value="학생" label="학생" />
-				<form:option value="그외" label="그외" />
+				<form:option value="01" label="사회인" />
+				<form:option value="02" label="주부" />
+				<form:option value="03" label="학생" />
+				<form:option value="04" label="그외" />
 			</form:select></td>
 		</tr>
 		<tr height="40px">

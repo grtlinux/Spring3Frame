@@ -1,5 +1,6 @@
 package logic;
 
-public class Shop {
+public interface Shop {
 
+	public void entryUser(User user);
 }
