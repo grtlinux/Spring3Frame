@@ -22,8 +22,7 @@
 	<task:scheduler id="messageScheduler" pool-size="5" />
 
 	<task:scheduled-tasks scheduler="messageScheduler">
-		<task:scheduled ref="messageBean" method="sayHello"
-			cron="* * * * * ?" />
+		<task:scheduled ref="messageBean" method="sayHello" cron="* * * * * ?" />
 	</task:scheduled-tasks>
 
 </beans>
