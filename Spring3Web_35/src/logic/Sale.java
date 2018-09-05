@@ -1,5 +1,8 @@
 package logic;
 
-public class Sale {
+import java.io.Serializable;
+
+public class Sale implements Serializable {
+
 
 }
