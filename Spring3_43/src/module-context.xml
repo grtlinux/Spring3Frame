@@ -13,22 +13,19 @@
 		</step>
 	</job>
 
-	<bean id="writer" class="sample1.SampleItemWriter" />
-
 	<bean id="jobParametersIncrementer"
 		class="org.springframework.batch.core.launch.support.RunIdIncrementer" />
 
 	<bean id="simpleStep"
-		class="org.springframework.batch.core.step.item.SimpleStepFactoryBean"
-		abstract="true">
+		class="org.springframework.batch.core.step.item.SimpleStepFactoryBean" abstract="true">
 		<property name="transactionManager" ref="transactionManager" />
 		<property name="jobRepository" ref="jobRepository" />
 		<property name="startLimit" value="100" />
 		<property name="commitInterval" value="10" />
 	</bean>
 
-	<bean id="reader" class="org.springframework.batch.item.file.FlatFileItemReader"
-		scope="step">
+	<bean id="reader"
+		class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
 		<property name="lineMapper">
 			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
 				<property name="lineTokenizer">
@@ -48,4 +45,8 @@
 		class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
 		<property name="targetType" value="sample1.Person" />
 	</bean>
+	
+	<bean id="writer"
+		class="sample1.SampleItemWriter" />
+	
 </beans>

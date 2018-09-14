@@ -6,6 +6,8 @@
 
 	<import resource="classpath:module-context.xml" />
 
+	
+	
 	<bean id="jobOperator"
 		class="org.springframework.batch.core.launch.support.SimpleJobOperator"
 		p:jobLauncher-ref="jobLauncher" p:jobExplorer-ref="jobExplorer"
@@ -15,14 +17,18 @@
 		class="org.springframework.batch.core.explore.support.JobExplorerFactoryBean"
 		p:dataSource-ref="dataSource" />
 
-	<bean id="jobRegistry"
-		class="org.springframework.batch.core.configuration.support.MapJobRegistry" />
-
+		
+		
 	<bean
 		class="org.springframework.batch.core.configuration.support.JobRegistryBeanPostProcessor">
 		<property name="jobRegistry" ref="jobRegistry" />
 	</bean>
 
+	<bean id="jobRegistry"
+		class="org.springframework.batch.core.configuration.support.MapJobRegistry" />
+
+		
+		
 	<bean id="jobLauncher"
 		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
 		<property name="jobRepository" ref="jobRepository" />
@@ -38,7 +44,8 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
 		<!-- JDBC 드라이버 클래스명 설정 -->
 		<property name="driverClassName">
 			<value>com.mysql.jdbc.Driver</value>
