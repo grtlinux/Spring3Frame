@@ -1,5 +1,25 @@
 package exception;
 
-public class IORuntimeException {
+public class IORuntimeException extends RuntimeException {
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public IORuntimeException() {
+		super();
+	}
+
+	public IORuntimeException(String message) {
+		super(message);
+	}
+
+	public IORuntimeException(Throwable cause) {
+		super(cause);
+	}
+
+	public IORuntimeException(String message, Throwable cause) {
+		super(message, cause);
+	}
 }
