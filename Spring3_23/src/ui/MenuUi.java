@@ -1,5 +1,8 @@
 package ui;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class MenuUi extends AbstractUiTemplate {
 
 	private SelectTeamUi selectTeamUi;
@@ -65,4 +68,12 @@ public class MenuUi extends AbstractUiTemplate {
         }
 	}
 
+	public static void main(String[] args) {
+		// 스프링 설정 파일 읽기
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		MenuUi menuUi = context.getBean(MenuUi.class);
+		while (true) {
+			menuUi.show();
+		}
+	}
 }
