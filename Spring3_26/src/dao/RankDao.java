@@ -1,5 +1,8 @@
 package dao;
 
-public class RankDao {
+import java.util.List;
 
+public interface RankDao {
+
+	public List<Object[]> getRank(Integer eventId);
 }
