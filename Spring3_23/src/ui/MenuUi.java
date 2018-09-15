@@ -4,7 +4,7 @@ public class MenuUi extends AbstractUiTemplate {
 
 	private SelectTeamUi selectTeamUi;
 	private InsertPlayerUi insertPlayerUi;
-	private SelectPlayerUi selectPalyerUi;
+	private SelectPlayerUi selectPlayerUi;
 
 	public void setSelectTeamUi(SelectTeamUi selectTeamUi) {
 		this.selectTeamUi = selectTeamUi;
@@ -15,7 +15,7 @@ public class MenuUi extends AbstractUiTemplate {
 	}
 
 	public void setSelectPalyerUi(SelectPlayerUi selectPlayerUi) {
-		this.selectPalyerUi = selectPlayerUi;
+		this.selectPlayerUi = selectPlayerUi;
 	}
 
 	@Override
