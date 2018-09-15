@@ -7,8 +7,15 @@ abstract public class AbstractUiTemplate extends AbstractUi {
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
-
+		// 메뉴 표시
+		showMenu();
+		// 콘솔에 입력된 값을 취득
+		String inputedString = getInputedString();
+		// 입력된 문자열을 검증
+		if (isValidNumber(inputedString)) {
+			// 처리를 기동
+			execute(NumberUtils.toInt(inputedString));
+		}
 	}
 
 	abstract protected void showMenu();
