@@ -15,6 +15,7 @@ public class User implements Serializable {
 	private String email;
 	private String job;
 	private Date birthDay;
+	
 	public String getUserId() {
 		return userId;
 	}
