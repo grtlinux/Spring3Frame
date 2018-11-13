@@ -2,6 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/1-1 lib"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.beans-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.core-3.0.2.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
